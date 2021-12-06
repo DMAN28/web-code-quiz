@@ -10,46 +10,69 @@ let availableQuestion = [];
 
 let questions = [
     {
-        question: "The first question",
-        choice1 : "as",
-        choice2 : "cf",
-        choice3 : "gh",
-        choice4 : "ki",
+        question: "JavaScript: What keyword declares a variable that cannot have its value changed?",
+        choice1 : "const",
+        choice2 : "var",
+        choice3 : "return",
+        choice4 : "cost",
         answer: 1
     },
     {
-        question: "The second question",
-        choice1 : "sa",
-        choice2 : "fc",
-        choice3 : "hg",
-        choice4 : "ir",
-        answer: 2
-    },
-    {
-        question: "The third question",
-        choice1 : "aws",
-        choice2 : "cyf",
-        choice3 : "gjh",
-        choice4 : "kli",
+        question: "What is the name of the built-in object that contains numerous functions useful for performing mathematical operations?",
+        choice1 : "calculations",
+        choice2 : "Arithmetic",
+        choice3 : "Math",
+        choice4 : "plus",
         answer: 3
     },
     {
-        question: "The forth question",
-        choice1 : "a1s",
-        choice2 : "c3f",
-        choice3 : "g7h",
-        choice4 : "k4i",
+        question: "What method of strings deletes all whitespace at the beginning and end of the string?",
+        choice1 : "delete()",
+        choice2 : "remove()",
+        choice3 : "backspace()",
+        choice4 : "trim()",
         answer: 4
     },
     {
-        question: "The fifth question",
-        choice1 : "a#s",
-        choice2 : "c4f",
-        choice3 : "%gh",
-        choice4 : "k^i",
+        question: "How are template literals formatted?",
+        choice1 : "# #",
+        choice2 : "* *",
+        choice3 : "/ /",
+        choice4 : "` `",
+        answer: 4
+    },
+    {
+        question: "How are multi-line comments fomatted?",
+        choice1 : "{}",
+        choice2 : "||",
+        choice3 : "//",
+        choice4 : "/**/",
+        answer: 4
+    },
+    {
+        question: "Which of the following is fundamental data type?",
+        choice1 : "Bean",
+        choice2 : "Defined",
+        choice3 : "Ring",
+        choice4 : "Number",
+        answer: 4
+    },
+    {
+        question: "Which of the following is fundamental data type??",
+        choice1 : "Null",
+        choice2 : "Integer",
+        choice3 : "Console",
+        choice4 : "Log",
         answer: 1
     },
-
+    {
+        question: "Which of the following is fundamental data type??",
+        choice1 : "Splice",
+        choice2 : "Return",
+        choice3 : "Symbol",
+        choice4 : "JSON",
+        answer: 3
+    },
 
 ]
 
