@@ -68,7 +68,7 @@ startQuiz = () => {
 
 getNewQuestion = () => {
     if(availableQuestions.length=== 0 || questionCounter > MAX_QUESTIONS) {
-        //return window.location.assign(*/end*);
+        return window.location.assign(./);
     }
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
@@ -96,11 +96,17 @@ choices.forEach(choice=> {
         const selectedChoice = e.target;
         const selectedAnswer = selectedChoice.dataset["number"];
 
+        const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect"; 
         
+        selectedChoice.parentElement.classList.add(classToApply);
 
+        setTimeout(() => {
+            selectedChoice.parentElement.classList.remove(classToApply);
+            getNewQuestion();
+        }, 1000);
+        });
         //console.log(selectedAnswer===currentQuestion.answer);
-        getNewQuestion();
     });
-});
+
 
 startQuiz();
