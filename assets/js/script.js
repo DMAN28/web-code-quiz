@@ -1,6 +1,6 @@
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
-
+const scoreText = document.getElementById('score');
 
 let currentQuestion = {};
 let acceptingAnswers = true;
@@ -68,6 +68,9 @@ startQuiz = () => {
 
 getNewQuestion = () => {
     if(availableQuestions.length=== 0 || questionCounter > MAX_QUESTIONS) {
+        localStorage.setItem('mostRecentScore', score);
+
+        //go to end page
         return window.location.assign("./hghscr.html");
     }
     questionCounter++;
@@ -97,6 +100,10 @@ choices.forEach(choice=> {
         const selectedAnswer = selectedChoice.dataset["number"];
 
         const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect"; 
+
+        if(classToApply === 'correct'){
+            incrementScore(CORRECT_BONUS);
+        }
         
         selectedChoice.parentElement.classList.add(classToApply);
 
@@ -108,5 +115,10 @@ choices.forEach(choice=> {
         //console.log(selectedAnswer===currentQuestion.answer);
     });
 
+    incrementScore = num => {
+        score += num;
+        scoreText.innerText = score;
+
+    };
 
 startQuiz();
